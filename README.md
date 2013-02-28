@@ -1,7 +1,7 @@
 observium-agent
 ===============
 
-The observium agent packaged for debian
+The observium agent packaged for debian.  Most of the files in this repo are from [Observium project](http://www.observium.org/wiki/Main_Page), specifically [here](http://fisheye.observium.org/browse/Observium/scripts).  I made this to make it easier to install the Observium agent on monitored devices.  It allows more information to be gathered by Observium using the included modules and even munin-plugins if munin is installed on the device.
 
 ## Install check_mk agent
 
