@@ -28,6 +28,10 @@ That will run on port **6556** so make sure that is accessible to the Observium 
 telnet <hostname> 6556
 ```
 
+## Enable the agent on the device
+
+![Enable the alerting module in the device settings](http://i.imgur.com/sIh0OA6.png)
+
 ## Install this debian package
 
 There is no package built yet, but when it is built it will be available from the downloads section.  You're welcome to try build it yourself but I'm not sure if this will work yet.
