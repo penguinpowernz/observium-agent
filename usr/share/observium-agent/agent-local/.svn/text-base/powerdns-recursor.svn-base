@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo '<<<app-powerdns-recursor>>>'
+rec_control get-all

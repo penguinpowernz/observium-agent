@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Unbound statistics
+# (c) 2012, Tom Laermans for Observium (www.observium.org)
+
+# Required server configuration:
+#
+#         statistics-cumulative: yes  
+#         extended-statistics: yes 
+
+echo '<<<unbound>>>'
+
+unbound-control stats

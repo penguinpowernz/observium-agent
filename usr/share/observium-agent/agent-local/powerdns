@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo '<<<app-powerdns>>>'
+pdns_control show '*'
