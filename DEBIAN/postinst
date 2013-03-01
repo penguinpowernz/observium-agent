@@ -10,7 +10,7 @@ ln -s /usr/share/observium-agent/agent-local/* /usr/lib/check_mk_agent/local/;
 if [ -e "/etc/munin/plugins" ]; then
 	echo -n "Link munin plugins for Observium<->Munin integration? [Y/n]: ";
 	read link_munin;
-	if [ "$link_munin" = "y" || "$link_munin" = "Y" ]; then
+	if [ "$(echo $link_munin|grep -i y|wc -l)" = "1" ] || [ "$link_munin" = "" ]; then
 		echo "Linking munin plugins folder /etc/munin/plugins...";
 		ln -s /etc/munin/plugins /usr/lib/check_mk_agent/local/munin-scripts;
 	else
