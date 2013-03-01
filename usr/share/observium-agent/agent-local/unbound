@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Unbound statistics
 # (c) 2012, Tom Laermans for Observium (www.observium.org)
@@ -8,6 +8,10 @@
 #         statistics-cumulative: yes  
 #         extended-statistics: yes 
 
-echo '<<<unbound>>>'
+unboundctl=`which unbound-control`
 
-unbound-control stats
+if [ $? -eq 0 ]
+then
+  echo '<<<unbound>>>'
+  $unboundctl stats
+fi

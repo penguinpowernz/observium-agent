@@ -1,6 +1,7 @@
-#!/bin/bash
-if [ -e /proc/net/rpc/nfs ]; then 
+#!/bin/sh
+if [ -e /proc/net/rpc/nfs ]
+then 
     echo '<<<app-nfs>>>'
-    cat /proc/net/rpc/nfs; 
+    cat /proc/net/rpc/nfs
     echo
-fi;
+fi

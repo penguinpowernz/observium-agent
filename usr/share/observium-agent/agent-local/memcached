@@ -1,13 +1,17 @@
-#!/usr/bin/php
+#!/usr/bin/env php
 <?php
-$m = new Memcached();
-$m->addServer('localhost', 11211);
-$stats = $m->getStats();
 
-if(is_array($stats))
+if (class_exists('Memcached'))
 {
-  echo("<<<app-memcached>>>\n");
-  echo(serialize($m->getStats()));
-  echo("\n");
+  $m = new Memcached();
+  $m->addServer('localhost', 11211);
+  $stats = $m->getStats();
+
+  if(is_array($stats))
+  {
+    echo("<<<app-memcached>>>\n");
+    echo(serialize($m->getStats()));
+    echo("\n");
+  }
 }
 ?>

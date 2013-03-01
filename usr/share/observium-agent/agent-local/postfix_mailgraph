@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Managed by Puppet
+#
+# b.toonk@capitar.com 8/2/2013
+# monitor postfix stats with mk_agent, used for observium
+
+if [ -f /tmp/mailgraph.out ]
+then
+  echo "<<<postfix_mailgraph>>>"
+  cat /tmp/mailgraph.out
+fi
+

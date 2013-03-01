@@ -1,0 +1,23 @@
+# This file is sourced by /etc/init.d/mailgraph
+#
+# This is a POSIX shell fragment
+#
+
+# Should Mailgraph start on boot (true|false) (default: true)
+BOOT_START="true"
+
+# Logfile used by mailgraph (default: /var/log/mail.log)
+MAIL_LOG="/var/log/mail.log"
+
+# Ignore mails from localhost (true|false) (default: false)
+# When true, this will pass --ignore-localhost to mailgraph daemon
+IGNORE_LOCALHOST="false"
+
+# Extra options to be passed to mailgraph daemon
+# See mailgraph -h output (default: "")
+EXTRA_OPTIONS="--ignore-localhost"
+
+# User and group http daemon runs as (default: www-data for both options)
+# Restart mailgraph daemon so that these values are taken into account
+HTTP_USER="www-data"
+HTTP_GROUP="www-data"

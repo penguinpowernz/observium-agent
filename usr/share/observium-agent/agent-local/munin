@@ -1,12 +1,15 @@
-# Lokale Einzelchecks
-if cd munin-scripts
+#!/bin/sh
+
+if [ -d munin-scripts ]
 then
-  for skript in $(ls)
+  cd munin-scripts
+  for script in `ls`
   do
-    if [ -x "$skript" ] ; then
-        echo "<<<munin-$skript>>>"
-        ./$skript
-	./$skript config
+    if [ -x "$script" ]
+    then
+      echo "<<<munin-$script>>>"
+      ./$script
+      ./$script config
     fi
   done
   cd ..

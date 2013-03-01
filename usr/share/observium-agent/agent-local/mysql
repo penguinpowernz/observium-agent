@@ -1,4 +1,4 @@
-#!/usr/bin/php
+#!/usr/bin/env php
 <?php
 
 ### This script requires php-cli and php-mysql packages
@@ -74,7 +74,7 @@ $version = "1.1.7";
 if (file_exists(__FILE__ . '.cnf' ) ) {
    require(__FILE__ . '.cnf');
 } else {
-  echo("No ".__FILE__ . '.cnf found!');
+  // echo("No ".__FILE__ . '.cnf found!');
   exit();
 }
 
