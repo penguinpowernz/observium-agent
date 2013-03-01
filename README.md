@@ -32,9 +32,30 @@ This is turned off by default so you must enable it on a per device basis.
 
 ![Enable the alerting module in the device settings](http://i.imgur.com/sIh0OA6.png)
 
-## Install this debian package
+## Install the debian package
 
-There is no package built yet, but when it is built it will be available from the downloads section.  You're welcome to try build it yourself but I'm not sure if this will work yet.
+Download the latest package section and install it using `dpkg`:
+
+```
+monitored-device:~$ wget http://www.filedropper.com/observium-agent020-betaall
+monitored-device:~$ dpkg -i observium-agent.deb
+Unpacking observium-agent (from observium-agent.deb) ...
+Setting up observium-agent (0.2.0-beta) ...
+Linking the agent modules...
+Link munin plugins for Observium<->Munin integration? [Y/n]:
+Linking munin plugins folder /etc/munin/plugins...
+Stopping internet superserver: xinetd.
+Starting internet superserver: xinetd.
+```
+
+### Download locations
+
+Damn, github disabled the downloads section...
+
+* http://www.filedropper.com/observium-agent020-betaall
+* http://depositfiles.com/files/u0bvorgwi
+* http://bayfiles.com/file/HFIl/ljLV74/observium-agent_0.2.0-beta_all.deb
+* https://www.dropbox.com/s/xg89ycqm5gurkzu/observium-agent_0.2.0-beta_all.deb
 
 ## References
 * http://youresuchageek.blogspot.co.nz/2013/01/howto-raspberry-pi-monitor-your.html
