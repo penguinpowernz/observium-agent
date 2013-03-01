@@ -1,13 +1,15 @@
 Package: observium-agent
-Version: 0.1.0-alpha
+Version: 0.2.0-beta
 Section: misc
 Priority: optional
 Architecture: all
 Essential: no
 Depends: xinetd, check-mk-agent
 Recommends: munin-node
-Installed-Size: 0
+Installed-Size: 288
 Maintainer: Robert McLeod <robert.mcleod@itpeople.co.nz>
-Homepage: <none>
+Homepage: https://github.com/hamstar/observium-agent
 Description: A polling agent for Observium to access information from monitored devices
-  Very alpha release
+  Installs scripts from the Observium project into the appropriate places.  Combined with
+  the dependent packages this allows a monitored device to provide more information to an
+  Observium server.  See http://www.observium.org/wiki/UNIX_Agent for more information.
