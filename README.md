@@ -37,7 +37,7 @@ This is turned off by default so you must enable it on a per device basis.
 Download the latest package section and install it using `dpkg`:
 
 ```
-monitored-device:~$ wget http://www.filedropper.com/observium-agent020-betaall
+monitored-device:~$ wget https://www.dropbox.com/s/xg89ycqm5gurkzu/observium-agent_0.2.0-beta_all.deb
 monitored-device:~$ dpkg -i observium-agent.deb
 Unpacking observium-agent (from observium-agent.deb) ...
 Setting up observium-agent (0.2.0-beta) ...
