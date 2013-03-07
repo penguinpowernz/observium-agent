@@ -57,6 +57,12 @@ Damn, github disabled the downloads section...
 * http://bayfiles.com/file/HFIl/ljLV74/observium-agent_0.2.0-beta_all.deb
 * https://www.dropbox.com/s/xg89ycqm5gurkzu/observium-agent_0.2.0-beta_all.deb
 
+## Install manually
+
+You could just copy the contents to your root (minus the `DEBIAN` folder).  You could then run the postinst file like `./postinst` or `bash postinst` which will run the install procedures.
+
+The file locations should be the same between distros.
+
 ## References
 * http://youresuchageek.blogspot.co.nz/2013/01/howto-raspberry-pi-monitor-your.html
 * http://mathias-kettner.de/check_mk_download.html
