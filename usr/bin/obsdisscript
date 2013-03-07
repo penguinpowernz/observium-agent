@@ -1,0 +1,18 @@
+#!/bin/bash
+
+SCRIPT="$1";
+ENABLED_DIR="/etc/observium/agent-scripts-enabled";
+
+if ! [ -f "$ENABLED_DIR/$SCRIPT" ]; then
+  echo "Not enabled.";
+  exit 0;
+fi;
+
+unlink "$ENABLED_DIR/$SCRIPT"
+if [ "$?" = "0" ]; then
+  echo "Disabled.";
+  exit 0;
+else
+  echo "Failed to disable $SCRIPT";
+  exit 1;
+fi;
