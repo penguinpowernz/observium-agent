@@ -1,0 +1,24 @@
+#!/bin/bash
+
+SCRIPT="$1";
+ENABLED_DIR="/etc/observium/agent-scripts-enabled";
+AVAILABLE_DIR="/etc/observium/agent-scripts-available";
+
+if [ -f "$ENABLED_DIR/$SCRIPT" ]; then
+  echo "Already enabled.";
+  exit 0;
+fi;
+
+if [ -f "$AVAILABLE_DIR/$SCRIPT" ]; then
+  ln -s "$AVAILABLE_DIR/$SCRIPT" "$ENABLED_DIR/$SCRIPT";
+  if [ "$?" = 0 ]; then
+    echo "Enabled.";
+    exit 0;
+  else
+    echo "Failed to enable $SCRIPT";
+    exit 1;
+  fi;
+else
+  echo "$SCRIPT does not exist";
+  exit 1;
+fi;
