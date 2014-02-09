@@ -14,8 +14,8 @@ apt-get install xinetd
 Then we install the check-mk-agent package, ensure `/etc/xinetd.d/check_mk` exists and restart xinetd. The observium agent uses this agent to provide info to polling servers.
 
 ```
-wget http://mathias-kettner.de/download/check-mk-agent_1.2.0p4-2_all.deb
-dpkg -i check-mk-agent_1.2.0p4-2_all.deb
+wget http://mathias-kettner.de/download/check-mk-agent_1.2.2p3-2_all.deb
+dpkg -i check-mk-agent_1.2.2p3-2_all.deb
 ls -l /etc/xinetd.d/check_mk
 service xinetd restart
 ```
@@ -37,6 +37,8 @@ This is turned off by default so you must enable it on a per device basis.
 Download the latest package section and install it using `dpkg`:
 
 ```
+This deb is out of date from the actual git file
+
 monitored-device:~$ wget https://www.dropbox.com/s/xg89ycqm5gurkzu/observium-agent_0.2.0-beta_all.deb
 monitored-device:~$ dpkg -i observium-agent.deb
 Unpacking observium-agent (from observium-agent.deb) ...
