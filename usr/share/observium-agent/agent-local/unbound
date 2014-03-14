@@ -12,6 +12,6 @@ unboundctl=`which unbound-control`
 
 if [ $? -eq 0 ]
 then
-  echo '<<<unbound>>>'
+  echo '<<<app-unbound>>>'
   $unboundctl stats
 fi
